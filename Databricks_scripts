@@ -43,6 +43,29 @@ df.createorReplaceTempView("apps")
 %sql select * from apps
 
 
+11.Find out Top 10 reviews given to apps
+%sql select App,sum(Reviews) from apps
+group by App
+order by Reviews desc
+
+12.Top 10 installs apps and Distribution of type(Free/Paid)
+%sql select App,sum(Installs) from apps
+group by App
+order by Reviews desc
+
+13.Category wise Distribution of installed apps
+%sql select Category,sum(Installs) from apps
+group by App
+order by Reviews desc
+
+14.Top paid apps
+%sql select App,sum(Price) from apps
+where Type='Paid'
+group by App
+order by Reviews desc
+
+
+
 
 
 
