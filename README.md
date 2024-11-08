@@ -28,7 +28,7 @@ Working:
 
 4.start working on notebook in Databricks.
 
-5.check the Databricks_scripts file where both Transformation and Analysis of data.
+5.check the Databricks_scripts file where both Transformation and Analysis of data is done.
 
 6.visualization can also be done in Datbricks.
 
