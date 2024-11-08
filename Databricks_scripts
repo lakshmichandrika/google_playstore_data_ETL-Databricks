@@ -35,7 +35,9 @@ df=df.withcolumn("Reviews",col("Reviews").cast(IntegerType()))\
               .withcolumn("Price",col("Price").cast(IntegerType()))
 
 
-9.
+9.Create a view and give any name
+df.createorReplaceTempView("apps")
+
 
 
 
