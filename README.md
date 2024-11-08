@@ -21,7 +21,7 @@ Working:
 
 2.create a notebook and compute(i.e, cluster setup)
 
-3.click on data-create new table-drag & drop the required files
+3.Ingestion(i.e,Extract)click on data-create new table-drag & drop the required files
 
 ![image](https://github.com/user-attachments/assets/eb58df9d-cfa6-43bc-8327-8dc2ad50e937)
 
