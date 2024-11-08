@@ -1,4 +1,4 @@
-# Google_Playstore_Data using Databricks
+# Google_Playstore_Data using Azure Databricks
 We have google playstore dataset containing information of different apps installed, rating ,versions and other details 
 
 
