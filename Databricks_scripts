@@ -1,1 +1,83 @@
+1.Open the data bricks notebook
+
+2.First import library
+
+import pyspark
+from pyspark.sql import sparksession
+from pyspark.sql.types import structtype,structfield,stringtype,integertype
+from pyspark.sql.functions import *
+
+3.create dataframe, need to paste the path which we got after uploading the file
+df=spark.read.load('/Filestore/tables/googleplaystore.csv',format='csv',sep=','header='true',escape='"',inferschema='true')
+
+4.To check how many records are there in the file
+df.count()
+
+5.to check the columns by loading only 1 column
+df.show(1)
+
+6.To check the Schema of file
+df.printschema()
+
+7.Data cleaning
+first remove the unwanted columns as per your requirement by giving column names
+
+df=df.drop("size","Content Rating","Last updated","Android Ver","Current Ver")
+df.show()
+df.printschema()
+
+8.convert the schema of some columns by checking the output of show  and printschema output data,remove unwanted symbols from columns also
+
+df=df.withcolumn("Reviews",col("Reviews").cast(IntegerType()))\
+ .withColumn("Installs",regexp_replace(col("Installs"),"[^0-9]",""))\
+ .withcolumn("Installs",col("Installs").cast(IntegerType()))\
+              .withcolumn("Price",regexp_replace(col("Price"),"[$]",""))\
+              .withcolumn("Price",col("Price").cast(IntegerType()))
+
+
+9.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
