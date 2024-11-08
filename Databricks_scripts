@@ -19,7 +19,7 @@ df.show(1)
 6.To check the Schema of file
 df.printschema()
 
-7.Data cleaning
+7.Data cleaning(i.e, Transformation)
 first remove the unwanted columns as per your requirement by giving column names
 
 df=df.drop("size","Content Rating","Last updated","Android Ver","Current Ver")
@@ -39,7 +39,8 @@ df=df.withcolumn("Reviews",col("Reviews").cast(IntegerType()))\
 df.createorReplaceTempView("apps")
 
 
-
+10.After created a view we can analyse the data using sql
+%sql select * from apps
 
 
 
