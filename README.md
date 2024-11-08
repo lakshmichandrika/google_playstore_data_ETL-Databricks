@@ -15,6 +15,7 @@ Agenda:
 5.Top paid rating apps
 
 
+
 Working:
 
 1.create a Databricks workspace.
